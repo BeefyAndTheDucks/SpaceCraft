@@ -20,13 +20,6 @@ public class EnergeticHealerBlock extends Block {
 	}
 
 	@Override
-	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-		player.sendMessage(Text.literal("Right clicked this"));
-
-		return super.onUse(state, world, pos, player, hand, hit);
-	}
-
-	@Override
 	public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 		// TODO: Consume energy
 
