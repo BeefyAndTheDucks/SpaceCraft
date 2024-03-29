@@ -1,5 +1,8 @@
 {
   "item.spacecraft.raw_aluminum": "Raw Aluminum",
   "item.spacecraft.aluminum": "Aluminum",
+
+  "block.spacecraft.aluminum_block": "Block of Aluminum",
+
   "itemGroup.spacecraft.space_craft_group": "SpaceCraft"
 }
