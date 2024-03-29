@@ -3,6 +3,8 @@
   "item.spacecraft.aluminum": "Aluminum",
 
   "block.spacecraft.aluminum_block": "Block of Aluminum",
+  "block.spacecraft.aluminum_ore": "Aluminum Ore",
+  "block.spacecraft.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
 
   "itemGroup.spacecraft.space_craft_group": "SpaceCraft"
 }
