@@ -1,6 +1,7 @@
 package com.spacecraftteam.spacecraft.item;
 
 import com.spacecraftteam.spacecraft.SpaceCraft;
+import com.spacecraftteam.spacecraft.item.custom.SpacepediaItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -15,6 +16,8 @@ public class ModItems {
 			new Item(new FabricItemSettings()), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
 	public static final Item ALUMINUM = registerItem("aluminum",
 			new Item(new FabricItemSettings()), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
+	public static final Item SPACEPEDIA = registerItem("spacepedia",
+			new SpacepediaItem(new FabricItemSettings().maxCount(1)), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
 
 	private static Item registerItem(String name, Item item, ItemGroup group) {
 		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
