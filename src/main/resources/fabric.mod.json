@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "id": "spacecraft",
   "version": "${version}",
+
   "name": "SpaceCraft",
   "description": "Mod for going to space",
   "authors": [
@@ -11,15 +12,15 @@
   "contact": {
     "repo": "https://github.com/BeefyAndTheDucks/spacecraft"
   },
-  "license": "MIT",
+  "license": "MIT License",
   "icon": "assets/spacecraft/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.spacecraftteam.spacecraft.spacecraft.client.SpaceCraftClient"
-    ],
     "main": [
-      "com.spacecraftteam.spacecraft.spacecraft.SpaceCraft"
+      "com.spacecraftteam.spacecraft.SpaceCraft"
+    ],
+    "client": [
+      "com.spacecraftteam.spacecraft.client.SpaceCraftClient"
     ]
   },
   "mixins": [
@@ -28,6 +29,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "java": ">=17"
   }
 }
