@@ -1,5 +1,6 @@
 package com.spacecraftteam.spacecraft;
 
+import com.spacecraftteam.spacecraft.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +11,6 @@ public class SpaceCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 }
