@@ -3,6 +3,7 @@
   "values": [
     "spacecraft:aluminum_block",
     "spacecraft:aluminum_ore",
-    "spacecraft:deepslate_aluminum_ore"
+    "spacecraft:deepslate_aluminum_ore",
+    "spacecraft:energetic_healer"
   ]
 }

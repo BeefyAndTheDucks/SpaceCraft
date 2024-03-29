@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "AGA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "spacecraft:aluminum"
+    },
+    "G": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "spacecraft:energetic_healer"
+  }
+}

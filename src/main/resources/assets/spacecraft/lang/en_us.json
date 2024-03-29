@@ -8,5 +8,7 @@
   "block.spacecraft.aluminum_ore": "Aluminum Ore",
   "block.spacecraft.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
 
+  "block.spacecraft.energetic_healer": "Energetic Healer",
+
   "itemGroup.spacecraft.space_craft_group": "SpaceCraft"
 }
