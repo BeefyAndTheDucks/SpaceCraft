@@ -1,6 +1,5 @@
 package com.spacecraftteam.spacecraft.gui;
 
-import io.github.cottonmc.cotton.gui.client.BackgroundPainter;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
@@ -46,7 +45,16 @@ public class SpacepediaGui extends LightweightGuiDescription {
 			WSprite icon = new WSprite(new Identifier("spacecraft:textures/icons/" + planet + ".png"));
 			root.add(icon, x, y, 32, 32);
 
-			WLabel planetLabel = new WLabel(Text.translatable("planet.spacecraft." + planet).formatted(Formatting.YELLOW));
+			Formatting textCol = Formatting.YELLOW;
+
+			if (planet.equalsIgnoreCase("earth")) {
+				WSprite circle = new WSprite(new Identifier("spacecraft:textures/icons/current_planet.png"));
+				root.add(circle, x, y, 32, 32);
+
+				textCol = Formatting.GREEN;
+			}
+
+			WLabel planetLabel = new WLabel(Text.translatable("planet.spacecraft." + planet).formatted(textCol));
 			planetLabel.setVerticalAlignment(VerticalAlignment.TOP);
 			planetLabel.setHorizontalAlignment(HorizontalAlignment.CENTER);
 			root.add(planetLabel, x + 16, y + 36, 0, 0);
@@ -56,13 +64,6 @@ public class SpacepediaGui extends LightweightGuiDescription {
 		root.add(sun, (WINDOW_WIDTH / 2) - 24, (WINDOW_HEIGHT / 2) - 24, 48, 48);
 
 		root.validate(this);
-	}
-
-	@Override
-	public void addPainters() {
-		if (this.rootPanel!=null) {
-			this.rootPanel.setBackgroundPainter(BackgroundPainter.createColorful(0x000000));
-		}
 	}
 
 

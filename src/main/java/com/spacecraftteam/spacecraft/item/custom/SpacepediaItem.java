@@ -48,8 +48,6 @@ public class SpacepediaItem extends Item {
 	}
 
 	private void outputSpacepedia(PlayerEntity player) {
-		// TODO: Make this show a GUI instead of a chat message (LibGui)
-
 		ServerPlayNetworking.send((ServerPlayerEntity) player, ModMessages.OPEN_SPACEPEDIA_ID, PacketByteBufs.empty());
 	}
 }
