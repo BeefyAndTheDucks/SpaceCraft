@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 3.0,
+  "group": "aluminum",
+  "ingredient": {
+    "item": "spacecraft:aluminum_ore"
+  },
+  "result": "spacecraft:raw_aluminum"
+}

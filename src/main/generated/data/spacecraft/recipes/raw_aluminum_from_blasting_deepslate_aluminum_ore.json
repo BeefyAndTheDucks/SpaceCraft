@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 3.0,
+  "group": "aluminum",
+  "ingredient": {
+    "item": "spacecraft:deepslate_aluminum_ore"
+  },
+  "result": "spacecraft:raw_aluminum"
+}

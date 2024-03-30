@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "spacecraft:aluminum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "spacecraft:aluminum"
+  }
+}

@@ -21,6 +21,9 @@
     ],
     "client": [
       "com.spacecraftteam.spacecraft.client.SpaceCraftClient"
+    ],
+    "fabric-datagen": [
+      "com.spacecraftteam.spacecraft.datagen.ModDataGeneration"
     ]
   },
   "mixins": [
