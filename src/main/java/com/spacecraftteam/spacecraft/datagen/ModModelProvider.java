@@ -4,9 +4,10 @@ import com.spacecraftteam.spacecraft.block.ModBlocks;
 import com.spacecraftteam.spacecraft.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Block;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
@@ -17,8 +18,17 @@ public class ModModelProvider extends FabricModelProvider {
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ENERGETIC_HEALER);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ALUMINUM_BLOCK);
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASTRO_STATION);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ALUMINUM_ORE);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_ALUMINUM_ORE);
+
+		registerHasLit(blockStateModelGenerator, ModBlocks.ALUMINUM_LAMP);
+	}
+
+	private void registerHasLit(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+		Identifier identifier = TexturedModel.CUBE_ALL.upload(block, blockStateModelGenerator.modelCollector);
+		Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_ALL, TextureMap::all);
+		blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
 	}
 
 	@Override

@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
@@ -26,8 +25,8 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 	@Override
 	public void generate() {
 		addDrop(ModBlocks.ALUMINUM_BLOCK);
+		addDrop(ModBlocks.ASTRO_STATION);
 		addDrop(ModBlocks.ENERGETIC_HEALER);
-
 
 		addDrop(ModBlocks.ALUMINUM_ORE, multipleOreDrops(ModBlocks.ALUMINUM_ORE, ModItems.RAW_ALUMINUM, 1, 3));
 		addDrop(ModBlocks.DEEPSLATE_ALUMINUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_ALUMINUM_ORE, ModItems.RAW_ALUMINUM, 1, 3));

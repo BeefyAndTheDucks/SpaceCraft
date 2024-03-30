@@ -1,10 +1,14 @@
 package com.spacecraftteam.spacecraft.item.custom;
 
+import com.spacecraftteam.spacecraft.networking.ModMessages;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -46,15 +50,6 @@ public class SpacepediaItem extends Item {
 	private void outputSpacepedia(PlayerEntity player) {
 		// TODO: Make this show a GUI instead of a chat message (LibGui)
 
-		player.sendMessage(Text.literal(
-				"Planets:\n" +
-				"   Mercury\n" +
-				"   Venus\n" +
-				"-> Earth\n" +
-				"   Mars\n" +
-				"   Jupiter\n" +
-				"   Saturn\n" +
-				"   Uranus\n" +
-				"   Neptune"));
+		ServerPlayNetworking.send((ServerPlayerEntity) player, ModMessages.OPEN_SPACEPEDIA_ID, PacketByteBufs.empty());
 	}
 }

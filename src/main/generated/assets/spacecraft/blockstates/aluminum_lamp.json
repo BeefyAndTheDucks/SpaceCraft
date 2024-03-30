@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "spacecraft:block/aluminum_lamp"
+    },
+    "lit=true": {
+      "model": "spacecraft:block/aluminum_lamp_on"
+    }
+  }
+}

@@ -13,11 +13,11 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
 	public static final Item RAW_ALUMINUM = registerItem("raw_aluminum",
-			new Item(new FabricItemSettings()), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
+			new Item(new FabricItemSettings()), ModItemGroup.MAIN_GROUP);
 	public static final Item ALUMINUM = registerItem("aluminum",
-			new Item(new FabricItemSettings()), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
+			new Item(new FabricItemSettings()), ModItemGroup.MAIN_GROUP);
 	public static final Item SPACEPEDIA = registerItem("spacepedia",
-			new SpacepediaItem(new FabricItemSettings().maxCount(1)), ModItemGroup.SPACE_CRAFT_ITEM_GROUP);
+			new SpacepediaItem(new FabricItemSettings().maxCount(1)), ModItemGroup.MAIN_GROUP);
 
 	private static Item registerItem(String name, Item item, ItemGroup group) {
 		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));

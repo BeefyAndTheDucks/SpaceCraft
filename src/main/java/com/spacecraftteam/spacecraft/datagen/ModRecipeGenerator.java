@@ -44,6 +44,18 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 						FabricRecipeProvider.conditionsFromItem(ModItems.ALUMINUM))
 				.offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.ENERGETIC_HEALER)));
 
+		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASTRO_STATION)
+				.pattern(" A ")
+				.pattern("ABA")
+				.pattern(" A ")
+				.input('A', ModItems.ALUMINUM)
+				.input('B', Items.BOOK)
+				.criterion(FabricRecipeProvider.hasItem(Items.BOOK),
+						FabricRecipeProvider.conditionsFromItem(Items.BOOK))
+				.criterion(FabricRecipeProvider.hasItem(ModItems.ALUMINUM),
+						FabricRecipeProvider.conditionsFromItem(ModItems.ALUMINUM))
+				.offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.ASTRO_STATION)));
+
 		ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPACEPEDIA)
 				.pattern("RAR")
 				.pattern("ARA")
