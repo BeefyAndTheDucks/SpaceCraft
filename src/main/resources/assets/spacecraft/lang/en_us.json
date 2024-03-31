@@ -30,5 +30,7 @@
   "planet.spacecraft.uranus": "Uranus",
   "planet.spacecraft.neptune": "Neptune",
 
-  "item.spacecraft.crude_oil_bucket": "Bucket of Crude Oil"
+  "item.spacecraft.crude_oil_bucket": "Bucket of Crude Oil",
+
+  "options.spacecraft.spacecraft_settings": "SpaceCraft Settings"
 }

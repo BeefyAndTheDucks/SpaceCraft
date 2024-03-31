@@ -1,8 +1,6 @@
 package com.spacecraftteam.spacecraft.gui;
 
-import io.github.cottonmc.cotton.gui.client.BackgroundPainter;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
-import io.github.cottonmc.cotton.gui.impl.LibGuiCommon;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;

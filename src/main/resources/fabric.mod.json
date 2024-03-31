@@ -24,6 +24,9 @@
     ],
     "fabric-datagen": [
       "com.spacecraftteam.spacecraft.datagen.ModDataGeneration"
+    ],
+    "modmenu": [
+      "com.spacecraftteam.spacecraft.impl.modmenu.SpaceCraftModMenu"
     ]
   },
   "mixins": [
