@@ -34,5 +34,8 @@
     "fabric": "*",
     "minecraft": "${minecraft_version}",
     "java": ">=17"
+  },
+  "suggests": {
+    "modmenu": "*"
   }
 }

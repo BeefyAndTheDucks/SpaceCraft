@@ -1,9 +1,12 @@
 package com.spacecraftteam.spacecraft.gui;
 
+import io.github.cottonmc.cotton.gui.client.BackgroundPainter;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
+import io.github.cottonmc.cotton.gui.impl.LibGuiCommon;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
+import net.fabricmc.fabric.api.util.TriState;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
@@ -66,5 +69,8 @@ public class SpacepediaGui extends LightweightGuiDescription {
 		root.validate(this);
 	}
 
-
+	@Override
+	public TriState isDarkMode() {
+		return TriState.TRUE;
+	}
 }
