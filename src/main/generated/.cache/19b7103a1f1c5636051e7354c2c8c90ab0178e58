@@ -1,8 +1,9 @@
-// 1.19.4	2024-03-30T16:44:49.8020415	SpaceCraft/Model Definitions
+// 1.19.4	2024-03-31T14:21:16.5717933	SpaceCraft/Model Definitions
 3ed3c987a237e4a9c670a76f2a19cea839ff6617 assets\spacecraft\models\item\aluminum.json
 05fa9fc8ce06b091a302882b18492bf46cb29f86 assets\spacecraft\models\item\raw_aluminum.json
 4d2965236267ee6082dab794396bca242ed5b1c9 assets\spacecraft\models\block\aluminum_lamp.json
 4f07f453c7358bc5d887a1e702cc029b06fe83b7 assets\spacecraft\models\block\energetic_healer.json
+c402a4894ad0f282be474474aabde188323b959f assets\spacecraft\models\item\crude_oil_bucket.json
 2edeeea54ce54485ec85dffa659252bb4cf7d207 assets\spacecraft\models\item\aluminum_ore.json
 7fe3c82b1ae384052de46cc8bb6afd2093103131 assets\spacecraft\models\block\deepslate_aluminum_ore.json
 b50d3f5e4b5ba6f2ba4f3a8b330be7c3ea2346e4 assets\spacecraft\blockstates\astro_station.json

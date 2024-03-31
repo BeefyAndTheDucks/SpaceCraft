@@ -1,6 +1,7 @@
 package com.spacecraftteam.spacecraft.datagen;
 
 import com.spacecraftteam.spacecraft.block.ModBlocks;
+import com.spacecraftteam.spacecraft.fluid.ModFluids;
 import com.spacecraftteam.spacecraft.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -36,5 +37,6 @@ public class ModModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(ModItems.ALUMINUM, Models.GENERATED);
 		itemModelGenerator.register(ModItems.RAW_ALUMINUM, Models.GENERATED);
 		itemModelGenerator.register(ModItems.SPACEPEDIA, Models.GENERATED);
+		itemModelGenerator.register(ModFluids.CRUDE_OIL_BUCKET, Models.GENERATED);
 	}
 }

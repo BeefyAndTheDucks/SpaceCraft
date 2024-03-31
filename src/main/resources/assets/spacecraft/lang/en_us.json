@@ -28,5 +28,7 @@
   "planet.spacecraft.jupiter": "Jupiter",
   "planet.spacecraft.saturn": "Saturn",
   "planet.spacecraft.uranus": "Uranus",
-  "planet.spacecraft.neptune": "Neptune"
+  "planet.spacecraft.neptune": "Neptune",
+
+  "item.spacecraft.crude_oil_bucket": "Bucket of Crude Oil"
 }

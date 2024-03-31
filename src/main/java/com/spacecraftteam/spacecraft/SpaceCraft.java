@@ -1,6 +1,7 @@
 package com.spacecraftteam.spacecraft;
 
 import com.spacecraftteam.spacecraft.block.ModBlocks;
+import com.spacecraftteam.spacecraft.fluid.ModFluids;
 import com.spacecraftteam.spacecraft.item.ModItems;
 import com.spacecraftteam.spacecraft.networking.ModMessages;
 import com.spacecraftteam.spacecraft.painting.ModPaintings;
@@ -27,5 +28,7 @@ public class SpaceCraft implements ModInitializer {
 		ModWorldGen.generateWorldGen();
 
 		ModMessages.registerC2SPackets();
+
+		ModFluids.register();
 	}
 }
