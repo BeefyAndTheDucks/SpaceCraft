@@ -13,7 +13,7 @@
     "repo": "https://github.com/BeefyAndTheDucks/spacecraft"
   },
   "license": "MIT License",
-  "icon": "assets/spacecraft/icon.png",
+  "icon": "assets/spacecraft/textures/icons/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

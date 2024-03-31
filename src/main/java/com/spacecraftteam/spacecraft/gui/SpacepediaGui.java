@@ -1,10 +1,14 @@
 package com.spacecraftteam.spacecraft.gui;
 
+import com.spacecraftteam.spacecraft.SpaceCraft;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
 import net.fabricmc.fabric.api.util.TriState;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
@@ -43,13 +47,13 @@ public class SpacepediaGui extends LightweightGuiDescription {
 			int x = (int)((Math.sin(radiansPerPlanet * i) + 1) / 2 * (WINDOW_WIDTH - 96)) + 32;
 			int y = (int)((Math.cos(radiansPerPlanet * i) + 1) / 2 * (WINDOW_HEIGHT - 96)) + 32;
 
-			WSprite icon = new WSprite(new Identifier("spacecraft:textures/icons/" + planet + ".png"));
+			WSprite icon = new WSprite(new Identifier(SpaceCraft.MOD_ID, "textures/icons/" + planet + ".png"));
 			root.add(icon, x, y, 32, 32);
 
 			Formatting textCol = Formatting.YELLOW;
 
 			if (planet.equalsIgnoreCase("earth")) {
-				WSprite circle = new WSprite(new Identifier("spacecraft:textures/icons/current_planet.png"));
+				WSprite circle = new WSprite(new Identifier(SpaceCraft.MOD_ID, "textures/icons/current_planet.png"));
 				root.add(circle, x, y, 32, 32);
 
 				textCol = Formatting.GREEN;
@@ -61,8 +65,14 @@ public class SpacepediaGui extends LightweightGuiDescription {
 			root.add(planetLabel, x + 16, y + 36, 0, 0);
 		}
 
-		WSprite sun = new WSprite(new Identifier("spacecraft:textures/icons/sun.png"));
+		WSprite sun = new WSprite(new Identifier(SpaceCraft.MOD_ID, "textures/icons/sun.png"));
 		root.add(sun, (WINDOW_WIDTH / 2) - 24, (WINDOW_HEIGHT / 2) - 24, 48, 48);
+
+		WButton doneButton = new WButton(ScreenTexts.DONE);
+		doneButton.setOnClick(()->{
+			MinecraftClient.getInstance().setScreen(GuiUtil.getPreviousScreen());
+		});
+		root.add(doneButton, WINDOW_WIDTH - 54, WINDOW_HEIGHT - 26, 48, 24);
 
 		root.validate(this);
 	}
