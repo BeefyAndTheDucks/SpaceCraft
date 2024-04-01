@@ -51,7 +51,7 @@ public abstract class CrudeOilFluid extends FlowableFluid {
 
 	@Override
 	public int getTickRate(WorldView world) {
-		return 5;
+		return 10;
 	}
 
 	@Override

@@ -17,8 +17,8 @@ public class SpaceCraftClient implements ClientModInitializer {
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_CRUDE_OIL, ModFluids.FLOWING_CRUDE_OIL,
 				new SimpleFluidRenderHandler(
 						new Identifier("minecraft:block/water_still"),
-						new Identifier("minecraft:block/water_flowing"),
-						0xA1111111
+						new Identifier("minecraft:block/water_flow"),
+						0xF0410E0E
 				));
 
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
