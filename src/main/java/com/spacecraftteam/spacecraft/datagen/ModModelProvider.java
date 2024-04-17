@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ENERGETIC_HEALER);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ALUMINUM_BLOCK);
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_ALUMINUM_BLOCK);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASTRO_STATION);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ALUMINUM_ORE);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_ALUMINUM_ORE);
@@ -37,6 +38,7 @@ public class ModModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(ModItems.ALUMINUM, Models.GENERATED);
 		itemModelGenerator.register(ModItems.RAW_ALUMINUM, Models.GENERATED);
 		itemModelGenerator.register(ModItems.SPACEPEDIA, Models.GENERATED);
+		itemModelGenerator.register(ModItems.CREATIVE_TELEPORTER, Models.GENERATED);
 		itemModelGenerator.register(ModFluids.CRUDE_OIL_BUCKET, Models.GENERATED);
 	}
 }

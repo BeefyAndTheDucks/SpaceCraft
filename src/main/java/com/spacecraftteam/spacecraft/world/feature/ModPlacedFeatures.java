@@ -22,7 +22,7 @@ public class ModPlacedFeatures {
 		var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, ALUMINUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ALUMINUM_ORE_KEY),
-				modifiersWithCount(16, // VeinsPerChunk
+				modifiersWithCount(10, // VeinsPerChunk
 						HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(80))));
 	}
 

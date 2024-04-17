@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -23,6 +24,8 @@ public class ModBlocks {
 
 	public static final Block ALUMINUM_BLOCK = registerBlock("aluminum_block",
 			new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.MAIN_GROUP);
+	public static final Block RAW_ALUMINUM_BLOCK = registerBlock("raw_aluminum_block",
+			new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.MAIN_GROUP);
 	public static final Block ASTRO_STATION = registerBlock("astro_station",
 			new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.MAIN_GROUP);
 	public static final Block ALUMINUM_ORE = registerBlock("aluminum_ore",

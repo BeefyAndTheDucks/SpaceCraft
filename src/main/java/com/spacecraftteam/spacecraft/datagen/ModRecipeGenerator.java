@@ -21,14 +21,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
 	@Override
 	public void generate(Consumer<RecipeJsonProvider> exporter) {
+		// Smelting
 		offerBlastingAndSmelting(exporter, List.of(ModBlocks.ALUMINUM_ORE), RecipeCategory.MISC, ModItems.RAW_ALUMINUM,
 				3f, 150, "aluminum");
 		offerBlastingAndSmelting(exporter, List.of(ModBlocks.DEEPSLATE_ALUMINUM_ORE), RecipeCategory.MISC, ModItems.RAW_ALUMINUM,
 				3f, 150, "aluminum");
 		offerBlastingAndSmelting(exporter, List.of(ModItems.RAW_ALUMINUM), RecipeCategory.MISC, ModItems.ALUMINUM,
 				3f, 100, "aluminum");
-		offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ALUMINUM, RecipeCategory.MISC, ModBlocks.ALUMINUM_BLOCK);
 
+		// Crafting
+		offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ALUMINUM, RecipeCategory.MISC, ModBlocks.ALUMINUM_BLOCK);
+		offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_ALUMINUM, RecipeCategory.MISC, ModBlocks.RAW_ALUMINUM_BLOCK);
+
+		// Custom Shaped
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENERGETIC_HEALER)
 				.pattern("RAR")
 				.pattern("AGA")

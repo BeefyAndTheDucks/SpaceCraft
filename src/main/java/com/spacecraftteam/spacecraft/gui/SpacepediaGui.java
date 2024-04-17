@@ -1,13 +1,13 @@
 package com.spacecraftteam.spacecraft.gui;
 
 import com.spacecraftteam.spacecraft.SpaceCraft;
+import com.spacecraftteam.spacecraft.util.Universe;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
 import net.fabricmc.fabric.api.util.TriState;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -17,17 +17,6 @@ public class SpacepediaGui extends LightweightGuiDescription {
 
 	private static final int WINDOW_WIDTH = 256;
 	private static final int WINDOW_HEIGHT = 256;
-
-	private static final String[] PLANETS = {
-			"mercury",
-			"venus",
-			"earth",
-			"mars",
-			"jupiter",
-			"saturn",
-			"uranus",
-			"neptune"
-	};
 
 	public SpacepediaGui() {
 		WPlainPanel root = new WPlainPanel();
@@ -39,27 +28,29 @@ public class SpacepediaGui extends LightweightGuiDescription {
 		label.setVerticalAlignment(VerticalAlignment.TOP);
 		root.add(label, WINDOW_WIDTH / 2, 8, 0, 0);
 
-		double radiansPerPlanet = Math.PI * 2 / PLANETS.length;
+		double radiansPerPlanet = Math.PI * 2 / Universe.PLANETS.length;
 
-		for (int i = 0; i < PLANETS.length; i++) {
-			String planet = PLANETS[i];
+		Universe.PlanetData currentPlanet = Universe.PlanetData.fromWorld(MinecraftClient.getInstance().world);
+
+		for (int i = 0; i < Universe.PLANETS.length; i++) {
+			Universe.PlanetData planet = Universe.PLANETS[i];
 
 			int x = (int)((Math.sin(radiansPerPlanet * i) + 1) / 2 * (WINDOW_WIDTH - 96)) + 32;
 			int y = (int)((Math.cos(radiansPerPlanet * i) + 1) / 2 * (WINDOW_HEIGHT - 96)) + 32;
 
-			WSprite icon = new WSprite(new Identifier(SpaceCraft.MOD_ID, "textures/icons/" + planet + ".png"));
+			WSprite icon = new WSprite(planet.getImageIdentifier());
 			root.add(icon, x, y, 32, 32);
 
 			Formatting textCol = Formatting.YELLOW;
 
-			if (planet.equalsIgnoreCase("earth")) {
+			if (planet == currentPlanet) {
 				WSprite circle = new WSprite(new Identifier(SpaceCraft.MOD_ID, "textures/icons/current_planet.png"));
 				root.add(circle, x, y, 32, 32);
 
 				textCol = Formatting.GREEN;
 			}
 
-			WLabel planetLabel = new WLabel(Text.translatable("planet.spacecraft." + planet).formatted(textCol));
+			WLabel planetLabel = new WLabel(planet.getUserFriendlyPlanetName().formatted(textCol));
 			planetLabel.setVerticalAlignment(VerticalAlignment.TOP);
 			planetLabel.setHorizontalAlignment(HorizontalAlignment.CENTER);
 			root.add(planetLabel, x + 16, y + 36, 0, 0);

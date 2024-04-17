@@ -32,6 +32,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.DEEPSLATE_ALUMINUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_ALUMINUM_ORE, ModItems.RAW_ALUMINUM, 1, 3));
 	}
 
+	@SuppressWarnings("unchecked")
 	private LootTable.Builder multipleOreDrops(Block drop, Item item, float minimumDropAmount, float maximumDropAmount) {
 		return BlockLootTableGenerator.dropsWithSilkTouch(drop, (LootPoolEntry.Builder)this.applyExplosionDecay(drop,
 				((LeafEntry.Builder)

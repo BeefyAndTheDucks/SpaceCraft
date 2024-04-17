@@ -3,8 +3,10 @@
   "item.spacecraft.aluminum": "Aluminum Ingot",
 
   "item.spacecraft.spacepedia": "The Spacepedia",
+  "item.spacecraft.creative_teleporter": "Creative Teleporter",
 
   "block.spacecraft.aluminum_block": "Block of Aluminum",
+  "block.spacecraft.raw_aluminum_block": "Block of Raw Aluminum",
   "block.spacecraft.astro_station": "Astro Station",
   "block.spacecraft.aluminum_ore": "Aluminum Ore",
   "block.spacecraft.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
@@ -20,6 +22,7 @@
   "painting.spacecraft.rocket.author": "BeefyAndTheDucks",
 
   "gui.spacecraft.spacepedia_title": "Spacepedia",
+  "gui.spacecraft.creative_teleporter_title": "Creative Teleporter",
 
   "planet.spacecraft.mercury": "Mercury",
   "planet.spacecraft.venus": "Venus",
@@ -29,6 +32,8 @@
   "planet.spacecraft.saturn": "Saturn",
   "planet.spacecraft.uranus": "Uranus",
   "planet.spacecraft.neptune": "Neptune",
+  "planet.spacecraft.nether": "Nether",
+  "planet.spacecraft.end": "The End",
 
   "item.spacecraft.crude_oil_bucket": "Bucket of Crude Oil",
 

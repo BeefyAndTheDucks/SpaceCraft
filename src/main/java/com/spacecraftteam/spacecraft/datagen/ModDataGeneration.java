@@ -1,5 +1,7 @@
 package com.spacecraftteam.spacecraft.datagen;
 
+import com.spacecraftteam.spacecraft.world.biome.ModBiomes;
+import com.spacecraftteam.spacecraft.world.dimension.ModDimensions;
 import com.spacecraftteam.spacecraft.world.feature.ModConfiguredFeatures;
 import com.spacecraftteam.spacecraft.world.feature.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -22,5 +24,7 @@ public class ModDataGeneration implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
 	}
 }

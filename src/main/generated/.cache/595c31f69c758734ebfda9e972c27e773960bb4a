@@ -1,0 +1,5 @@
+// 1.19.4	2024-04-13T10:59:10.5109093	SpaceCraft/World Gen
+845ac0f3ba652b7d01174ccdbe5865d2d5bd688f data\spacecraft\dimension_type\mars_type.json
+4c155a714ee47edceeb75103684cd695909c231d data\spacecraft\worldgen\placed_feature\aluminum_ore_placed.json
+63a6cd95b197f238259cb4e9988f04ae95cbc20a data\spacecraft\worldgen\configured_feature\aluminum_ore.json
+94b9ad2f9decd67958b597d2a1f2afa79bdb69fe data\spacecraft\worldgen\biome\soft_plains.json

@@ -1,4 +1,4 @@
-package com.spacecraftteam.spacecraft.networking.packet;
+package com.spacecraftteam.spacecraft.networking.packet.S2C;
 
 import com.spacecraftteam.spacecraft.gui.GuiUtil;
 import com.spacecraftteam.spacecraft.gui.SpacepediaGui;

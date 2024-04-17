@@ -27,6 +27,9 @@
     ],
     "modmenu": [
       "com.spacecraftteam.spacecraft.impl.modmenu.SpaceCraftModMenu"
+    ],
+    "terrablender": [
+      "com.spacecraftteam.spacecraft.impl.terrablender.SpaceCraftTerrablender"
     ]
   },
   "mixins": [
@@ -36,7 +39,8 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "java": ">=17"
+    "java": ">=17",
+    "terrablender": ">=2.3.0.22"
   },
   "suggests": {
     "modmenu": "*"
