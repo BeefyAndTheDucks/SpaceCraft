@@ -18,14 +18,14 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class Universe {
-	public static final PlanetData MERCURY = new PlanetData("mercury", ServerWorld.OVERWORLD);
-	public static final PlanetData VENUS = new PlanetData("venus", ServerWorld.OVERWORLD);
+	public static final PlanetData MERCURY = new PlanetData("mercury", ModDimensions.MERCURY.LEVEL_KEY);
+	public static final PlanetData VENUS = new PlanetData("venus", ModDimensions.VENUS.LEVEL_KEY);
 	public static final PlanetData EARTH = new PlanetData("earth", ServerWorld.OVERWORLD);
-	public static final PlanetData MARS = new PlanetData("mars", ModDimensions.MARS_LEVEL_KEY);
-	public static final PlanetData JUPITER = new PlanetData("jupiter", ServerWorld.OVERWORLD);
-	public static final PlanetData SATURN = new PlanetData("saturn", ServerWorld.OVERWORLD);
-	public static final PlanetData URANUS = new PlanetData("uranus", ServerWorld.OVERWORLD);
-	public static final PlanetData NEPTUNE = new PlanetData("neptune", ServerWorld.OVERWORLD);
+	public static final PlanetData MARS = new PlanetData("mars", ModDimensions.MARS.LEVEL_KEY);
+	public static final PlanetData JUPITER = new PlanetData("jupiter", ModDimensions.JUPITER.LEVEL_KEY);
+	public static final PlanetData SATURN = new PlanetData("saturn", ModDimensions.SATURN.LEVEL_KEY);
+	public static final PlanetData URANUS = new PlanetData("uranus", ModDimensions.URANUS.LEVEL_KEY);
+	public static final PlanetData NEPTUNE = new PlanetData("neptune", ModDimensions.NEPTUNE.LEVEL_KEY);
 	public static final PlanetData NETHER = new PlanetData("nether", ServerWorld.NETHER);
 	public static final PlanetData END = new PlanetData("end", ServerWorld.END);
 

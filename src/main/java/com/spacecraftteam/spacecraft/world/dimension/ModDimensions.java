@@ -1,6 +1,7 @@
 package com.spacecraftteam.spacecraft.world.dimension;
 
 import com.spacecraftteam.spacecraft.SpaceCraft;
+import com.spacecraftteam.spacecraft.util.PlanetDimension;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -15,31 +16,29 @@ import net.minecraft.world.dimension.DimensionTypes;
 import java.util.OptionalLong;
 
 public class ModDimensions {
-	public static final RegistryKey<DimensionOptions> MARS_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
-			new Identifier(SpaceCraft.MOD_ID, "mars"));
-	public static final RegistryKey<World> MARS_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
-			new Identifier(SpaceCraft.MOD_ID, "mars"));
-	public static final RegistryKey<DimensionType> MARS_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
-			new Identifier(SpaceCraft.MOD_ID, "mars_type"));
+
+	public static final PlanetDimension MERCURY = new PlanetDimension("mercury", 1);
+	public static final PlanetDimension VENUS = new PlanetDimension("venus", 1);
+	public static final PlanetDimension MARS = new PlanetDimension("mars", 1);
+	public static final PlanetDimension JUPITER = new PlanetDimension("jupiter", 1);
+	public static final PlanetDimension SATURN = new PlanetDimension("saturn", 1);
+	public static final PlanetDimension URANUS = new PlanetDimension("uranus", 1);
+	public static final PlanetDimension NEPTUNE = new PlanetDimension("neptune", 1);
+
+	public static final PlanetDimension[] PLANETS = new PlanetDimension[] {
+			MERCURY,
+			VENUS,
+			MARS,
+			JUPITER,
+			SATURN,
+			URANUS,
+			NEPTUNE
+	};
 
 	public static void bootstrapType(Registerable<DimensionType> context) {
-		context.register(MARS_DIM_TYPE, new DimensionType(
-				OptionalLong.of(12000), // fixedTime
-				true, // hasSkylight
-				false, // hasCeiling
-				false, // ultraWarm
-				true, // natural
-				1.0, // coordinateScale
-				true, // bedWorks
-				false, // respawnAnchorWorks
-				0, // minY
-				128, // height
-				128, // logicalHeight
-				BlockTags.INFINIBURN_OVERWORLD, // infiniburn
-				DimensionTypes.OVERWORLD_ID, // effectsLocation
-				0.8f, // ambientLight
-				new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 0), 0)
-		));
+		for (PlanetDimension planet : PLANETS) {
+			planet.register(context);
+		}
 	}
 
 }

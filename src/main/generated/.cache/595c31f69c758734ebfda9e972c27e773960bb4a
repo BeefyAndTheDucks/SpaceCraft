@@ -1,5 +1,11 @@
-// 1.19.4	2024-04-13T10:59:10.5109093	SpaceCraft/World Gen
-845ac0f3ba652b7d01174ccdbe5865d2d5bd688f data\spacecraft\dimension_type\mars_type.json
-4c155a714ee47edceeb75103684cd695909c231d data\spacecraft\worldgen\placed_feature\aluminum_ore_placed.json
-63a6cd95b197f238259cb4e9988f04ae95cbc20a data\spacecraft\worldgen\configured_feature\aluminum_ore.json
+// 1.19.4	2025-04-14T19:25:20.9290549	SpaceCraft/World Gen
+ddaaded89d13c5540f3c0e6c7ddd8cc96f7248b5 data\spacecraft\dimension_type\uranus_type.json
+cb95293f5054e6694d5eee12d6c614d1cf99b8e5 data\spacecraft\dimension_type\mercury_type.json
+2dc327a4d28e5dea283410a0bc1d04adfe1d9e34 data\spacecraft\worldgen\placed_feature\aluminum_ore_placed.json
+fc9cb8557c64002ffeede294e1a1bd7d51338a9c data\spacecraft\dimension_type\neptune_type.json
 94b9ad2f9decd67958b597d2a1f2afa79bdb69fe data\spacecraft\worldgen\biome\soft_plains.json
+70626b21a13d2ff4547467dcc0275f9c15e4f726 data\spacecraft\dimension_type\saturn_type.json
+a3fc158bccce2b506cd7d0a4df72577baa50ca43 data\spacecraft\dimension_type\venus_type.json
+a569282ed09f04795a405a79fd910692367ad877 data\spacecraft\dimension_type\mars_type.json
+63a6cd95b197f238259cb4e9988f04ae95cbc20a data\spacecraft\worldgen\configured_feature\aluminum_ore.json
+8d7e674fd00033b406e2d7c421a1c85fdf3b9d19 data\spacecraft\dimension_type\jupiter_type.json

@@ -2,7 +2,7 @@
   "ambient_light": 0.8,
   "bed_works": true,
   "coordinate_scale": 1.0,
-  "effects": "spacecraft:mars",
+  "effects": "spacecraft:jupiter",
   "fixed_time": 12000,
   "has_ceiling": false,
   "has_raids": false,
